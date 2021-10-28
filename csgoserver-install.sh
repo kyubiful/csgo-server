@@ -1,19 +1,20 @@
 #/bin/bash
 
-sudo apt install steamcmd -y
+dpkg --configure -a
 
-sudo add-apt-repository multiverse
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install lib32gcc1 steamcmd -y
+apt install steamcmd -y
 
-sudo apt install lib32gcc1 -y
+add-apt-repository multiverse
+dpkg --add-architecture i386
+apt update
+apt install lib32gcc1 steamcmd -y
+apt install lib32gcc1 -y
 
 mkdir ~/Steam && cd ~/Steam
 
 curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
 
-sudo apt install tmux screen -y;
+apt install tmux screen -y;
 
 cd ~/Steam
-./steamcmd.sh
+./steamcmd.sh +login anonymous +force_install_dir ../cs_go +app_update 740 validate +quit
