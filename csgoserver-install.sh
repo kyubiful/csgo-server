@@ -22,5 +22,9 @@ sudo apt install tmux screen -y;
 cd ~/Steam
 ./steamcmd.sh +login anonymous +force_install_dir ~/cs_go/ +app_update 740 validate +quit
 
+cp ~/csgo-server/esl5on5.cfg /cs_go/csgo/cfg/
+cp ~/csgo-server/eslMastersGotv.cfg /cs_go/csgo/cfg/
+cp ~/csgo-server/server.cfg /cs_go/csgo/cfg/
+
 cd ~
-git clone https://github.com/jffz/docker-ebot.git
+git clone https://github.com/jffz/docker-ebot.git 
