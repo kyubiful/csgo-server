@@ -25,7 +25,7 @@ cd ~/Steam
 
 cp ~/csgo-server/esl5on5.cfg ~/cs_go/csgo/cfg/
 cp ~/csgo-server/eslMastersGotv.cfg ~/cs_go/csgo/cfg/
-cp ~/csgo-server/server.cfg ~/cs_go/csgo/cfg/
+cp ~/csgo-server/logaddress.cfg ~/cs_go/csgo/cfg/
 
 cd ~
 git clone https://github.com/jffz/docker-ebot.git 
