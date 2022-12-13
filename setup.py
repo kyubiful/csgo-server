@@ -35,8 +35,10 @@ def install_csgo(ip):
     logaddress_file = r.read().replace('xxx.xxx.xxx.xxx', ip)
   with open('~/cs_go/csgo/cfg/logaddress.cfg', 'w') as w:
     w.write(logaddress_file)
-  with open('./cfg/esl5on5.cfg', 'rb') as r, open('~/cs_go/csgo/cfg/esl5on5.cfg', 'wb') as w:
-      w.write(r.read())
+  with open('./cfg/esl5on5.cfg', 'rb') as r:
+      esl5on5_cfg = r.read().replace('{steamaccount}', steamaccount)
+  with open('~/cs_go/csgo/cfg/esl5on5.cfg', 'wb') as w:
+      w.write(esl5on5_cfg)
   with open('./cfg/gotv.cfg', 'rb') as r, open('~/cs_go/csgo/cfg/gotv.cfg', 'wb') as w:
       w.write(r.read())
   with open('./cfg/autoexec.cfg', 'rb') as r, open('~/cs_go/csgo/cfg/autoexec.cfg', 'wb') as w:
