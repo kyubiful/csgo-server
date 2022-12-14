@@ -32,10 +32,10 @@ def install_csgo(ip):
   print(Fore.RED + '[*] Coping CFG Files ...')
 
   with open('./logaddress.cfg', 'r') as r:
-    logaddress_file = r.read().replace('xxx.xxx.xxx.xxx', ip)
+    logaddress_file = r.read().replace('{xxx.xxx.xxx.xxx}', ip)
   with open('~/cs_go/csgo/cfg/logaddress.cfg', 'w') as w:
     w.write(logaddress_file)
-  with open('./cfg/esl5on5.cfg', 'rb') as r:
+  with open('./cfg/5on5.cfg', 'rb') as r:
       esl5on5_cfg = r.read().replace('{steamaccount}', steamaccount)
   with open('~/cs_go/csgo/cfg/esl5on5.cfg', 'wb') as w:
       w.write(esl5on5_cfg)
@@ -47,7 +47,7 @@ def install_csgo(ip):
   print(Fore.YELLOW + '[*] Coping Start Server Script ...')
 
   with open('./scripts/startserver.sh', 'r') as r:
-    startserver_file = r.read().replace('xxx.xxx.xxx.xxx', ip).replace('{steamaccount}', steamaccount)
+    startserver_file = r.read().replace('{xxx.xxx.xxx.xxx}', ip).replace('{steamaccount}', steamaccount)
   with open('~/cs_go/startserver.sh', 'w') as w:
     w.write(startserver_file)
     
